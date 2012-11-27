@@ -15,37 +15,32 @@
     <script src="scripts/main.js"></script>
   </head>
   <body>
-  <div class="container">
-    <div class="hero-unit">
-      <h1>Wotcha!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>jQuery</li>
-        <li>Modernizr</li>
-        <li>Mocha</li>
-      </ul>
-      <p>installed.</p>
-      <h3>Enjoy coding! - Yeoman</h3>
-    </div>
-  </div>
-
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
+  <link rel="stylesheet" href="styles/main.css"/>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+  <script src="scripts/vendor/modernizr.min.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
 
+<body>
+  
+  <div id="container">
+    <!-- Shows a card with suit characters. We use the ascii table to display these suit characters. -->
+    <div id="card" class="card" onclick="flip(event)">
+      <!-- The front and face classes are respectively used to style the front and back of the card -->
+      <!-- Shows the front of the card. Shown when this page initially loads in Safari on iPhone 2.0 or in iPhone simulator. -->
+      <div id="front" class="front face">
+        <p>♠ ♦<br> ♣ ♥</p>
+      </div>
+      <!-- Shows the back of the card. Hidden when this page initially loads in Safari on iPhone 2.0 or in iPhone simulator. -->
+      <div id="back" class="back face">
+        <p>♦ ♠<br> ♥ ♣</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-  </body>
+</body>
 </html>
